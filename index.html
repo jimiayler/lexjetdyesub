@@ -473,7 +473,7 @@
                       <div class="videocont">
                         <a href="https://www.youtube.com/watch?v=ARK_yI5r5FM" rel="prettyPhoto" title="Epson video">
                           <img src="img/Create-unique-t-shirts.jpg" class="ytpic img-responsive" alt="" />
-                          <div class="play-icon"></div>
+                          <span class="play-icon"></span>
                         </a>
                       </div>
                       <h3>Epson SureColor F6200</h3>
@@ -487,7 +487,7 @@
                       <div class="videocont">
                         <a href="https://www.youtube.com/watch?v=lLlq2zyE4H0" rel="prettyPhoto" title="Epson video">
                           <img src="img/custom-printed-drink-coasters.jpg" class="ytpic img-responsive" alt="" />
-                          <div class="play-icon"></div>
+                          <span class="play-icon"></span>
                         </a>
                       </div>
                       <h3>Epson SureColor F6200</h3>
@@ -501,7 +501,7 @@
                       <div class="videocont">
                         <a href="https://www.youtube.com/watch?v=zl7PNMHHXUM" rel="prettyPhoto" title="Epson video">
                           <img src="img/printed-pillowcases.jpg" class="ytpic img-responsive" alt="" />
-                          <div class="play-icon"></div>
+                          <span class="play-icon"></span>
                         </a>
                       </div>
                       <h3>Epson SureColor F6200</h3>
@@ -517,7 +517,7 @@
                       <div class="videocont">
                         <a href="https://www.youtube.com/watch?v=tMKOb4GOJ1A" rel="prettyPhoto" title="Epson video">
                           <img src="img/photo-metal-panels.jpg" class="ytpic img-responsive" alt="" />
-                          <div class="play-icon"></div>
+                          <span class="play-icon"></span>
                         </a>
                       </div>
                       <h3>Epson SureColor F6200</h3>
@@ -531,7 +531,7 @@
                       <div class="videocont">
                         <a href="https://youtu.be/im1qG0V5zRg" rel="prettyPhoto" title="Epson video">
                           <img src="img/lexjet-blog-3.jpg" class="ytpic img-responsive" alt="" />
-                          <div class="play-icon"></div>
+                          <span class="play-icon"></span>
                         </a>
                       </div>
                       <h3>ChromaLuxe Aluminum Photo Panels</h3>
@@ -588,30 +588,30 @@
             modal : true,
         });
 
-        // $("#dialog_trigger").click( function() {
-        //     $("#dialog").load('contact.html', function() {
-        //         $("#dialog").dialog("open");
-        //         $('button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close').blur();
-        //     });
-        // });
+        $("#dialog_trigger").click( function() {
+            $("#dialog").load('contact.html', function() {
+                $("#dialog").dialog("open");
+                $('button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close').blur();
+            });
+        });
 
-        // $("a[rel^='prettyPhoto']").prettyPhoto();
+        $("a[rel^='prettyPhoto']").prettyPhoto();
         
-        // $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
-        // $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
     
-        // $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-        //   custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-        //   changepicturecallback: function(){ initialize(); }
-        // });
+        $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+          custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+          changepicturecallback: function(){ initialize(); }
+        });
 
-        // $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-        //   custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-        //   changepicturecallback: function(){ _bsap.exec(); }
-        // });
+        $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+          custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+          changepicturecallback: function(){ _bsap.exec(); }
+        });
 
-        $('.tablink, .headlink').on('click', function(e) { 
-          $('.nav a[href="' +  $(this).attr("title") + '"]').tab('show');      
+        $('.tablink').on('click', function(e) { 
+          $('.nav a[href="' +  $(this).attr("href") + '"]').tab('show');      
         }); 
 
         function checkWidth() {
